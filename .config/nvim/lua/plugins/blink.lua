@@ -5,7 +5,8 @@ return {
     signature = { enabled = true },
 
     completion = {
-      list = { selection = "auto_insert" },
+      -- Don't select by default, auto insert on selection
+      list = { selection = { preselect = false, auto_insert = true } },
     },
 
     keymap = {
