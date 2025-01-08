@@ -1,2 +1,5 @@
 # ignore ~/.cfg bare repo
 .cfg
+
+# ignore lazy lock file
+lazy-lock.json
