@@ -6,6 +6,6 @@
 -- vim.opt.timeoutlen = 1000
 
 -- disable autoformat
-vim.g.autoformat = false
+-- vim.g.autoformat = false
 
 
