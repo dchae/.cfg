@@ -1,0 +1,12 @@
+{
+  "use_strict": {
+    "prefix": "us",
+    "body": ["\"use strict\";", "$0"],
+    "luasnip": {
+      "priority": 2000,
+      "autotrigger": false,
+      "wordTrig": false
+    },
+    "description": "Insert 'use strict'"
+  }
+}

@@ -1,3 +1,3 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
-require("aerial").setup({})
+-- require("aerial").setup({})
