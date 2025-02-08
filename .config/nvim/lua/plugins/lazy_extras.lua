@@ -3,7 +3,7 @@ return {
     "saghen/blink.cmp",
     ---@class PluginLspOpts
     opts = {
-      signature = { enabled = true },
+      signature = { enabled = false },
 
       completion = {
         -- Don't select by default, auto insert on selection

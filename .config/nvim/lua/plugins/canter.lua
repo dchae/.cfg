@@ -3,6 +3,7 @@ return {
   opts = {
     runners = {
       ["js"] = "node",
+      ["ts"] = "bun",
       ["rb"] = "ruby",
       ["py"] = "python",
     },
