@@ -79,7 +79,7 @@ DEFAULT_USER="$USER"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git asdf)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,3 +117,6 @@ fi
 
 # dotfile config git alias
 alias config='/usr/bin/git --git-dir=/Users/dchae/.cfg/ --work-tree=/Users/dchae'
+
+# mise activation
+eval "$(mise activate zsh)"
