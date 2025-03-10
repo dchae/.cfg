@@ -8,13 +8,30 @@ return {
       completion = {
         -- Don't select by default, auto insert on selection
         list = { selection = { preselect = false, auto_insert = true } },
+        -- trigger = {
+        --   show_on_blocked_trigger_characters = { " ", "\n", "\t" },
+        -- },
       },
 
       keymap = {
-        preset = "super-tab",
-        -- preset = "enter",
-        --
-        ["<Tab>"] = { "select_next", "fallback" },
+        -- preset = "super-tab",
+
+        ["<Tab>"] = {
+          function(cmp)
+            if cmp.snippet_active() then
+              return cmp.accept()
+            else
+              return cmp.select_and_accept()
+            end
+          end,
+          "select_next",
+          "fallback",
+        },
+
+        -- ["<Tab>"] = {
+        --   "select_next",
+        --   "fallback",
+        -- },
         ["<S-Tab>"] = { "select_prev", "fallback" },
         ["<CR>"] = { "accept", "fallback" },
       },
@@ -26,6 +43,32 @@ return {
     opts = {
       layout = {
         min_width = { 20 },
+      },
+    },
+  },
+
+  {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        jinja_lsp = {
+          filetypes = { "jinja", "htmldjango" },
+        },
+      },
+    },
+  },
+
+  {
+    "stevearc/conform.nvim",
+    optional = true,
+    opts = {
+      formatters_by_ft = {
+        htmldjango = { "djlint" },
+      },
+      formatters = {
+        djlint = {
+          prepend_args = { "--reformat" },
+        },
       },
     },
   },
