@@ -54,7 +54,7 @@ return {
     opts = {
       servers = {
         jinja_lsp = {
-          filetypes = { "jinja", "htmldjango", "html" },
+          filetypes = { "jinja", "htmldjango" },
         },
       },
     },

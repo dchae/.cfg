@@ -79,7 +79,10 @@ DEFAULT_USER="$USER"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  poetry
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,3 +123,15 @@ alias config='/usr/bin/git --git-dir=/Users/dchae/.cfg/ --work-tree=/Users/dchae
 
 # mise activation
 eval "$(mise activate zsh)"
+
+# Created by `pipx` on 2025-03-10 12:18:30
+export PATH="$PATH:/Users/dchae/.local/bin"
+
+# To activate completions in zsh, first make sure compinit is marked for
+#    autoload and run autoload:
+
+autoload -U compinit && compinit
+
+# Afterwards you can enable completions for pipx:
+
+eval "$(register-python-argcomplete pipx)"
