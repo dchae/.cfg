@@ -66,7 +66,6 @@ return {
     opts = {
       formatters_by_ft = {
         htmldjango = { "djlint" },
-        html = { "djlint" },
       },
       formatters = {
         djlint = {
